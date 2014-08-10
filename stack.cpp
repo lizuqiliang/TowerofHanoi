@@ -6,6 +6,16 @@ stack::stack(){
 	length = 0;
 }
 
+stack::~stack(){
+	NODE* curr = head;
+	while( curr != NULL ) {
+		NODE* next = curr->next;
+		delete curr;
+		curr = next;
+	}
+	head = NULL;
+}
+
 void stack::push(float f){
 	NODE* temp = new NODE;
 	temp->n=f;
