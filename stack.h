@@ -9,7 +9,7 @@ struct NODE{
 class stack{
 	public:
 		stack();
-		//~stack();
+		~stack();
 		void push(float f);
 		void display();
 		int getlength();
